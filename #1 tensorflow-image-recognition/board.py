@@ -36,8 +36,8 @@ with tf.name_scope("cost_function") as scope:
     # Create a summary to monitor the cost function
     tf.summary.scalar("cost_function", cost_function)
 
+# Gradient descent
 with tf.name_scope("train") as scope:
-    # Gradient descent
     optimizer = tf.train.GradientDescentOptimizer(learning_rate).minimize(cost_function)
 
 # Initializing the variables
